@@ -8,9 +8,9 @@ from peewee import Model, IntegerField, CharField
 load_dotenv()
 
 # ①実行したSQLをログで出力する設定
-logger = logging.getLogger("peewee")
-logger.addHandler(logging.StreamHandler())
-logger.setLevel(logging.DEBUG)
+# logger = logging.getLogger("peewee")
+# logger.addHandler(logging.StreamHandler())
+# logger.setLevel(logging.DEBUG)
 
 # ②データベースへの接続設定
 # db = SqliteDatabase("peewee_db.sqlite")  # SQLite固定の場合
