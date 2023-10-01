@@ -1,4 +1,5 @@
-from tools import create_data, read_alldata, find_user, delete_data, edit_data
+from read_all import read_alldata
+from create_date import create_data
 
 
 def main():
@@ -8,22 +9,16 @@ def main():
     condition()
 
 
-def condition():
+def condition():  # 入力された文字列で場合分け
     while True:
         command = input("Your command > ")
         if command == "S" or command == "s":
-            read_alldata()
+            read_alldata()  # 全て表示
         elif command == "A" or command == "a":
-            create_data()
+            create_data()  # 新しく追加
         elif command == "Q" or command == "q":
             print("Bye!")
             return
-        elif command == "F" or command == "f":
-            find_user()
-        elif command == "D" or command == "d":
-            delete_data()
-        elif command == "E" or command == "e":
-            edit_data()
         else:
             print(f"{command}: command not found")
         print()
