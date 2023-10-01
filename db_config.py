@@ -1,5 +1,5 @@
 import os
-import logging
+# import logging
 from playhouse.db_url import connect
 from dotenv import load_dotenv
 from peewee import Model, IntegerField, CharField

@@ -1,13 +1,12 @@
 from db_config import Userdata
 
 
-def create_userdata():
-    # インスタンスを生成してから保存
-    userdata = Userdata(name="Bob", age=20)
-    userdata.save()  # 保存
-    # インスタンスを生成しないで保存
-    Userdata.create(name="Tom", age=18)
+def create_data():
+    user_name = input("New user name > ")
+    user_age = input("New user age > ")
+    print(f"Add new user: {user_name}")
+    Userdata.create(name=user_name, age=user_age)
 
 
 if __name__ == "__main__":
-    create_userdata()
+    create_data()
